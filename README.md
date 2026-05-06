@@ -15,7 +15,7 @@ A simple React + Vite workspace for uploading bank loan rules in PDF form and ge
 3. Install dependencies:
 
 ```bash
-npm install
+npm install --loglevel verbose
 ```
 
 4. Start the workspace:
