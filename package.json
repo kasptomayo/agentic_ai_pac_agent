@@ -1,0 +1,35 @@
+{
+  "name": "agentnic-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "vite",
+    "dev:server": "node server.cjs",
+    "build": "npm run build:client",
+    "build:client": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.3",
+    "express": "^4.18.4",
+    "pdfjs-dist": "^5.7.284",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.5",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^7.6.0",
+    "tsx": "^4.7.1",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "ts-node-dev": "^2.0.0"
+  }
+}
