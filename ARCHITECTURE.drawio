@@ -1,0 +1,85 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram id="architecture" name="Agentic UI Architecture">
+    <mxGraphModel dx="1410" dy="825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="800" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1;align=center;verticalAlign=top;" value="Agentic UI Architecture" vertex="1">
+          <mxGeometry height="40" width="600" x="300" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="user" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;strokeWidth=2;" value="User Browser" vertex="1">
+          <mxGeometry height="60" width="300" x="450" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D4E6F1;strokeColor=#3498DB;strokeWidth=2;" value="Frontend (React + Vite)" vertex="1">
+          <mxGeometry height="80" width="400" x="400" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;align=left;verticalAlign=top;" value="• PdfUploader Component&#xa;• PDF Text Extraction (pdfjs-dist)&#xa;• React State Management&#xa;• Display REGO Output" vertex="1">
+          <mxGeometry height="64" width="380" x="810" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="backend" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5F4E6;strokeColor=#27AE60;strokeWidth=2;" value="Backend (Express.js + TypeScript)" vertex="1">
+          <mxGeometry height="80" width="400" x="400" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="backend-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;align=left;verticalAlign=top;" value="• API Endpoint: POST /api/generate-rego&#xa;• CORS Configuration&#xa;• Request Validation&#xa;• Error Handling" vertex="1">
+          <mxGeometry height="64" width="380" x="810" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCF3CF;strokeColor=#F39C12;strokeWidth=2;" value="Google ADK Agent (Cloud Run)" vertex="1">
+          <mxGeometry height="80" width="400" x="400" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="cloud-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=11;align=left;verticalAlign=top;" value="• Endpoint: /run_sse&#xa;• Converts Bank Rules → OPA REGO&#xa;• Model: text-bison-001&#xa;• Secure HTTPS Communication" vertex="1">
+          <mxGeometry height="64" width="380" x="810" y="548" as="geometry" />
+        </mxCell>
+        <mxCell id="config" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5B7B1;strokeColor=#E74C3C;strokeWidth=2;" value="Configuration (.env)" vertex="1">
+          <mxGeometry height="80" width="200" x="50" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="config-text" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;align=left;verticalAlign=top;" value="• GOOGLE_ADK_API_KEY&#xa;• GOOGLE_ADK_API_URL&#xa;• GOOGLE_ADK_AGENT_ID&#xa;• PORT (4000)" vertex="1">
+          <mxGeometry height="64" width="180" x="60" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow1" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#555;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="160" as="sourcePoint" />
+            <mxPoint x="600" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="localhost:5173" vertex="1">
+          <mxGeometry height="20" width="80" x="610" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#555;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="300" as="sourcePoint" />
+            <mxPoint x="600" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="POST /api/generate-rego&#xa;(JSON)" vertex="1">
+          <mxGeometry height="35" width="80" x="610" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" edge="1" parent="1" style="endArrow=classic;startArrow=classic;html=1;strokeColor=#555;strokeWidth=2;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="460" as="sourcePoint" />
+            <mxPoint x="600" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="HTTPS POST /run_sse&#xa;(Bearer Token)" vertex="1">
+          <mxGeometry height="35" width="80" x="610" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" edge="1" parent="1" style="endArrow=open;html=1;strokeColor=#E74C3C;strokeWidth=2;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="250" y="420" as="sourcePoint" />
+            <mxPoint x="400" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="label4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;" value="Loads" vertex="1">
+          <mxGeometry height="20" width="40" x="310" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=12;fontStyle=1;align=left;" value="Technologies Used" vertex="1">
+          <mxGeometry height="25" width="150" x="50" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-tech" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=10;align=left;verticalAlign=top;" value="Frontend: React 18, TypeScript, Vite, pdfjs-dist, axios&#xa;Backend: Express.js, TypeScript, cors, dotenv, axios&#xa;External: Google ADK Agent, Cloud Run, OPA (Open Policy Agent)" vertex="1">
+          <mxGeometry height="60" width="700" x="50" y="705" as="geometry" />
+        </mxCell>
+        <mxCell id="workflow" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=9;align=center;italic=1;" value="Data Flow: 1. User uploads PDF → 2. Frontend extracts text → 3. Backend receives text → 4. Backend calls Google ADK Agent → 5. Agent converts rules to REGO → 6. REGO returned to Frontend → 7. Display to User" vertex="1">
+          <mxGeometry height="30" width="1100" x="50" y="760" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
