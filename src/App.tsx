@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="app-shell">
       <header>
-        <h1>Agentnic UI</h1>
+        <h1>Agentic UI</h1>
         <p>Transform bank loan rules into OPA REGO policies using intelligent agent technology</p>
       </header>
 

@@ -1,4 +1,4 @@
-# Agentnic UI
+# Agentic UI
 
 A simple React + Vite workspace for uploading bank loan rules in PDF form and generating an OPA REGO policy via a Google ADK agent running on Cloud Run.
 
@@ -15,7 +15,7 @@ A simple React + Vite workspace for uploading bank loan rules in PDF form and ge
 3. Install dependencies:
 
 ```bash
-npm install --loglevel verbose
+npm install
 ```
 
 4. Start the workspace:

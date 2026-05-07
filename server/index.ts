@@ -32,7 +32,7 @@ app.post('/api/generate-rego', async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Agentnic UI server listening on http://localhost:${port}`);
+  console.log(`Agentic UI server listening on http://localhost:${port}`);
 });
 
 async function generateRegoPolicy(pdfText: string): Promise<string> {
@@ -50,7 +50,7 @@ async function generateRegoPolicy(pdfText: string): Promise<string> {
   try {
     const response = await axios.post(`${apiUrl}/run_sse`, {
       app_name: "regoagent",
-      user_id: "agentnic-ui-user",
+      user_id: "agentic-ui-user",
       session_id: `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       new_message: {
         role: "user",
